@@ -30,7 +30,7 @@ function About() {
 
           <div className="about__image-wrapper">
             <img
-              src="/images/pfp.jpeg"
+              src={`${import.meta.env.BASE_URL}images/pfp.jpeg`}
               alt="Retrato de Ángel Galán"
               className="about__image"
             />
