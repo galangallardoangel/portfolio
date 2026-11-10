@@ -18,7 +18,7 @@ export default function Contacto() {
               quieres conocerme, estaré encantado de escucharte.
             </p>
 
-            <a href="mailto:tuemail@ejemplo.com" className={styles.email}>
+            <a href="mailto:" className={styles.email}>
               galangallardoangel@gmail.com
             </a>
 

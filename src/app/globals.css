@@ -69,8 +69,9 @@ a {
 }
 
 section {
-  min-height: 100vh;
-  padding: 60px;
+  min-height: auto;
+  padding: 60px 8%;
+  scroll-margin-top: 80px;
 }
 
 /* ========================================
