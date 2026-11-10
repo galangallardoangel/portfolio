@@ -1,0 +1,148 @@
+/* ==============================
+   SECCIÓN DE CONTACTO
+============================== */
+
+.contacto {
+  min-height: auto;
+  padding: 45px 8% 35px;
+  /* El resto de tus propiedades se mantienen */
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ==============================
+   PRESENTACIÓN
+============================== */
+
+.presentacion {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+/* ==============================
+   FOTO DE PERFIL
+============================== */
+
+.photo {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #8b5cf6;
+  box-shadow: 0 0 40px rgba(139, 92, 246, 0.2);
+}
+
+/* ==============================
+   TEXTO
+============================== */
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.eyebrow {
+  color: #a78bfa;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.contactInfo h2 {
+  color: #ffffff;
+  font-size: clamp(36px, 5vw, 56px);
+  margin: 0 0 20px;
+}
+
+.description {
+  max-width: 600px;
+  color: #a1a1aa;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+/* ==============================
+   CORREO ELECTRÓNICO
+============================== */
+
+.email {
+  color: #b9a0ff;
+  font-size: clamp(17px, 2vw, 21px);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-bottom: 25px;
+}
+
+.email:hover {
+  color: #ffffff;
+}
+
+/* ==============================
+   REDES SOCIALES
+============================== */
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.socialLinks a {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a1a1aa;
+  background-color: #12121c;
+  border: 1px solid #252536;
+  border-radius: 12px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.socialLinks a:hover {
+  color: #ffffff;
+  background-color: #8b5cf6;
+  border-color: #8b5cf6;
+  transform: translateY(-4px);
+}
+
+/* ==============================
+   DISEÑO PARA MÓVILES
+============================== */
+
+@media (max-width: 768px) {
+  .contacto {
+    padding: 60px 6% 30px;
+  }
+
+  .presentacion {
+    flex-direction: column;
+    text-align: center;
+    gap: 35px;
+  }
+
+  .photo {
+    width: 190px;
+    height: 190px;
+  }
+
+  .contactInfo {
+    align-items: center;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+}

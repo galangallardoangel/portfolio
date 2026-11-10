@@ -1,0 +1,327 @@
+/* =================================
+   NAVBAR - ESTRUCTURA PRINCIPAL
+================================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(17, 17, 17, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  color: white;
+  padding: 20px 60px;
+  font-family: var(--font-space-grotesk), sans-serif;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+  z-index: 100;
+}
+
+.navbar h2 {
+  font-size: 28px;
+  margin: 0;
+}
+
+/* =================================
+   LOGO
+================================= */
+
+.menuLogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menuLogo:hover {
+  transform: translateY(-2px);
+}
+
+.logoIcon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.menuLogo:hover .logoIcon {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+/* =================================
+   ENLACES DE NAVEGACIÓN
+================================= */
+
+.menu {
+  display: flex;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.menu a {
+  position: relative;
+  display: inline-block;
+
+  color: #b0b0b0;
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+/* Línea animada */
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 2px;
+
+  background-color: var(--accent);
+  border-radius: 2px;
+
+  transition: width 0.3s ease;
+}
+
+.menu a:hover {
+  color: white;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* =================================
+   BOTÓN DE CONTACTO
+================================= */
+
+.menu a[href="#contacto"] {
+  color: white;
+  background-color: var(--accent);
+  padding: 11px 18px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.menu a[href="#contacto"]::after {
+  display: none;
+}
+
+.menu a[href="#contacto"]:hover {
+  background-color: transparent;
+  box-shadow: 0 0 18px rgba(139, 92, 246, 0.3);
+  transform: translateY(-3px);
+}
+
+/* =================================
+   BOTÓN HAMBURGUESA
+================================= */
+
+.menuBoton {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.menuBoton:hover {
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
+/* =================================
+   CABECERA DEL MENÚ MÓVIL
+================================= */
+
+.menuHeader {
+  display: none;
+}
+
+/* =================================
+   ANIMACIÓN DEL MENÚ MÓVIL
+================================= */
+
+@keyframes menuEntrada {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes enlacesEntrada {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =================================
+   RESPONSIVE - TABLET Y MÓVIL
+================================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 18px 24px;
+  }
+
+  .menuBoton {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  /* Menú abierto */
+
+  .menu.menuAbierto {
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    background: linear-gradient(145deg, #171321 0%, #0a0a0a 65%, #111 100%);
+
+    padding: 30px;
+    z-index: 1000;
+
+    animation: menuEntrada 0.35s ease both;
+  }
+
+  /* Cabecera */
+
+  .menuHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 24px;
+    border-bottom: 1px solid #333;
+  }
+
+  .menuHeader button {
+    background: none;
+    border: 1px solid var(--accent);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .menuHeader button:hover {
+    background-color: var(--accent);
+  }
+
+  /* Enlaces móviles */
+
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+
+    margin-top: 35px;
+    padding: 0;
+  }
+
+  .menu li {
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: -1px;
+
+    opacity: 0;
+    animation: enlacesEntrada 0.4s ease forwards;
+  }
+
+  .menu li:nth-child(1) {
+    animation-delay: 0.08s;
+  }
+
+  .menu li:nth-child(2) {
+    animation-delay: 0.16s;
+  }
+
+  .menu li:nth-child(3) {
+    animation-delay: 0.24s;
+  }
+
+  .menu li:nth-child(4) {
+    animation-delay: 0.32s;
+  }
+
+  .menu a {
+    color: white;
+  }
+
+  .menu a::after {
+    bottom: -8px;
+  }
+
+  /* Contacto en móvil */
+
+  .menu a[href="#contacto"] {
+    padding: 0;
+    background: none;
+    border-radius: 0;
+  }
+
+  .menu a[href="#contacto"]:hover {
+    background: none;
+    box-shadow: none;
+    transform: none;
+    color: var(--accent);
+  }
+}
+
+/* =================================
+   ACCESIBILIDAD - MOVIMIENTO REDUCIDO
+================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar *,
+  .navbar *::before,
+  .navbar *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

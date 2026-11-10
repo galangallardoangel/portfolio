@@ -1,0 +1,158 @@
+/* SECCIÓN PROYECTOS */
+
+.proyectos {
+  padding: 100px 8%;
+  background-color: #0b0b12;
+  scroll-margin-top: 80px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: clamp(30px, 4vw, 42px);
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+/* CUADRÍCULA */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  margin-top: 45px;
+}
+
+/* TARJETA */
+
+.card {
+  min-width: 0;
+  background-color: #12121c;
+  border: 1px solid #252536;
+  border-radius: 16px;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #8b5cf6;
+}
+
+/* IMAGEN */
+
+.image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: linear-gradient(135deg, #292044, #171725);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a78bfa;
+  font-size: 14px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* CONTENIDO */
+
+.cardContent {
+  padding: clamp(16px, 2vw, 25px);
+}
+
+.cardContent h3 {
+  color: #ffffff;
+  font-size: clamp(18px, 2vw, 22px);
+  margin-bottom: 12px;
+}
+
+.cardContent p {
+  color: #a1a1aa;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* TECNOLOGÍAS */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.tags span {
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: #211b35;
+  color: #b9a0ff;
+  font-size: 12px;
+}
+
+/* ENLACES */
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.links a {
+  color: #a78bfa;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #ffffff;
+}
+
+/* TABLETS */
+@media (max-width: 900px) {
+  .proyectos {
+    padding: 90px 6%;
+  }
+
+  .grid {
+    gap: 22px;
+  }
+}
+
+/* MÓVILES */
+@media (max-width: 600px) {
+  .proyectos {
+    padding: 70px 6%;
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+    margin-top: 30px;
+  }
+
+  .cardContent {
+    padding: 18px;
+  }
+
+  .tags {
+    gap: 8px;
+  }
+
+  .links {
+    gap: 16px;
+  }
+}

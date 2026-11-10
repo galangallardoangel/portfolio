@@ -1,0 +1,427 @@
+/* =================================
+   HERO - ESTRUCTURA PRINCIPAL
+================================= */
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 8%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.content {
+  max-width: 550px;
+}
+
+.visual {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* =================================
+   PRESENTACIÓN Y TITULAR
+================================= */
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -3px;
+  margin-bottom: 24px;
+}
+
+.title span {
+  display: block;
+  color: var(--accent);
+}
+
+.description {
+  max-width: 500px;
+  color: #b0b0b0;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* =================================
+   BOTONES
+================================= */
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.buttonPrimary,
+.buttonSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Botón principal */
+
+.buttonPrimary {
+  background-color: var(--accent);
+  color: white;
+  border: 1px solid var(--accent);
+}
+
+.buttonPrimary:hover {
+  background-color: transparent;
+  transform: translateY(-3px);
+}
+
+/* Botón secundario */
+
+.buttonSecondary {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #444;
+}
+
+.buttonSecondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* =================================
+   TARJETA DE CÓDIGO
+================================= */
+
+.codeCard {
+  width: 100%;
+  max-width: 520px;
+  background-color: #111015;
+  border: 1px solid #292432;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.codeHeader {
+  padding: 18px 22px;
+  border-bottom: 1px solid #292432;
+  background-color: #17151d;
+}
+
+.codeHeader p {
+  margin: 0;
+  color: #a78bfa;
+  font-size: 13px;
+  font-family: monospace;
+}
+
+.codeContent {
+  padding: 28px 24px;
+  overflow-x: auto;
+}
+
+.codeContent pre {
+  margin: 0;
+}
+
+.codeContent code {
+  color: #d4d4d8;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 2;
+  white-space: pre;
+}
+
+/* =================================
+   COLORES DE SINTAXIS DEL CÓDIGO
+================================= */
+
+.codeKeyword {
+  color: #c084fc;
+}
+
+.codeVariable {
+  color: #f0abfc;
+}
+
+.codeString {
+  color: #a5d6a7;
+}
+
+.codeBoolean {
+  color: #fbbf24;
+}
+
+/* =================================
+   REDES SOCIALES
+================================= */
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.socialLink {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #b0b0b0;
+  background-color: #17151d;
+  border: 1px solid #292432;
+  border-radius: 10px;
+
+  transition: all 0.3s ease;
+}
+
+.socialLink svg {
+  width: 21px;
+  height: 21px;
+}
+
+.socialLink:hover {
+  color: white;
+  background-color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.cvButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  color: #ffffff;
+  background-color: #8b5cf6;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cvButton:hover {
+  background-color: #7c3aed;
+  transform: translateY(-3px);
+}
+
+/* =================================
+   RESPONSIVE - TABLET
+================================= */
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+    padding: 100px 6%;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .content {
+    max-width: 700px;
+  }
+
+  .visual {
+    justify-content: flex-start;
+  }
+
+  .codeCard {
+    max-width: 600px;
+  }
+
+  .title {
+    font-size: 54px;
+  }
+}
+
+/* =================================
+   RESPONSIVE - MÓVIL
+================================= */
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 90px 6% 60px;
+  }
+
+  .container {
+    gap: 40px;
+  }
+
+  .title {
+    font-size: clamp(40px, 10vw, 48px);
+    letter-spacing: -2px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .description {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .buttons {
+    gap: 12px;
+  }
+
+  .buttonPrimary,
+  .buttonSecondary {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+
+  .codeHeader {
+    padding: 14px 18px;
+  }
+
+  .codeContent {
+    padding: 20px 16px;
+  }
+
+  .codeContent code {
+    font-size: 12px;
+  }
+
+  .socialLinks {
+    margin-top: 24px;
+  }
+}
+/* STACK DE TECNOLOGÍAS */
+
+.stack {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 520px;
+  overflow: hidden;
+  margin-top: 24px;
+}
+.stackItem svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ELEMENTOS DEL STACK */
+.stackItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #b8b8c5;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.stackItem svg {
+  width: 18px;
+  height: 18px;
+}
+.stackItem:hover {
+  color: #a78bfa;
+  transition: color 0.3s ease;
+}
+/* ANIMACIÓN DEL STACK */
+
+.stackTrack {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.stackGroup {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 24px;
+  padding-right: 24px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* PAUSAR AL PASAR EL RATÓN */
+.stack:hover .stackTrack {
+  animation-play-state: paused;
+}
+
+/* RESPETAR LA PREFERENCIA DE MOVIMIENTO */
+@media (prefers-reduced-motion: reduce) {
+  .stackTrack {
+    animation: none;
+  }
+}
+
+/* EVITAR DESBORDAMIENTOS EN MÓVILES */
+
+@media (max-width: 900px) {
+  .hero {
+    padding-left: 1%;
+    padding-right: 1%;
+    overflow: hidden;
+  }
+
+  .container {
+    min-width: 0;
+  }
+
+  .visual {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .codeCard {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .stack {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
