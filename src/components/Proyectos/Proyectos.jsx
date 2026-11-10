@@ -5,11 +5,21 @@ const proyectos = [
     id: 1,
     titulo: "Doify",
     descripcion:
-      "Aplicación web de gestión de tareas que permite crear, editar, eliminar y organizar actividades en un tablero Kanban con diferentes estados y prioridades. Incluye almacenamiento local para conservar las tareas y una interfaz responsive.",
+      "Aplicación web de gestión de tareas que permite crear, editar, eliminar y organizar actividades en un tablero Kanban según su estado y prioridad. Incluye almacenamiento local para conservar las tareas y una interfaz adaptable a diferentes dispositivos.",
     imagen: "/proyectos/doify.png",
     tecnologias: ["Next.js", "React", "localStorage", "CSS"],
     demo: "https://galangallardoangel.github.io/doify",
-    github: "https://github.com/galangallardoangel/doify/",
+    github: "https://github.com/galangallardoangel/doify",
+  },
+  {
+    id: 2,
+    titulo: "React Star Rating",
+    descripcion:
+      "Componente reutilizable de valoración por estrellas desarrollado con React. Permite personalizar el número de estrellas, el color, el tamaño y los mensajes de valoración. Incluye interacción mediante hover y selección de puntuaciones.",
+    imagen: "/proyectos/star-rating.png",
+    tecnologias: ["React", "JavaScript", "CSS", "Vite"],
+    demo: "https://galangallardoangel.github.io/star-rating/",
+    github: "https://github.com/galangallardoangel/star-rating",
   },
 ];
 
