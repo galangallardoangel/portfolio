@@ -39,7 +39,7 @@ const proyectos = [
       "Node.js",
       "Express",
     ],
-    demo: "PEGA_AQUI_TU_URL_DE_VERCEL",
+    demo: "https://dashboard-weather-flame.vercel.app/",
     github: "https://github.com/galangallardoangel/dashboard-weather",
   },
 ];
