@@ -21,6 +21,27 @@ const proyectos = [
     demo: "https://galangallardoangel.github.io/star-rating/",
     github: "https://github.com/galangallardoangel/star-rating",
   },
+
+  {
+    id: 3,
+    titulo: "Weather Dashboard App",
+    descripcion:
+      "Aplicación web de consulta meteorológica desarrollada con React. Permite buscar ciudades, consultar las condiciones meteorológicas actuales, visualizar la previsión de 7 días mediante gráficos interactivos y gestionar ciudades favoritas e historial de búsquedas. Incluye diseño responsive y gestión del estado con Redux Toolkit.",
+    imagen: "/proyectos/weather-dashboard.png",
+    tecnologias: [
+      "React",
+      "JavaScript",
+      "Vite",
+      "Redux Toolkit",
+      "React Redux",
+      "Recharts",
+      "CSS",
+      "Node.js",
+      "Express",
+    ],
+    demo: "PEGA_AQUI_TU_URL_DE_VERCEL",
+    github: "https://github.com/galangallardoangel/dashboard-weather",
+  },
 ];
 
 export default function Proyectos() {
